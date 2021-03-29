@@ -8,9 +8,9 @@
 1. pqina/flip
 
 [樣式顏色]：
-$color_green: #50a685;
-$color_grey: #595757;
-$color_white: #ffffff;
+1. $color_green: #50a685;
+2. $color_grey: #595757;
+3. $color_white: #ffffff;
 
 [檔案連結]： https://yizi-yeh.github.io/Countdown-Timer/
 
