@@ -1,14 +1,10 @@
 @charset "UTF-8";
 * {
-  font-family: "Oswald", "微軟正黑體";
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif, "微軟正黑體";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: #ffffff;
 }
 
 html,
@@ -29,33 +25,11 @@ body {
 }
 
 .tick {
-  font-size: 1rem;
   white-space: nowrap;
 }
 
-.tick-flip,
-.tick-text-inline {
-  font-size: 2.5em;
-}
-
-.tick-label {
-  margin-top: 1em;
-  font-size: 1em;
-}
-
-.tick-text-inline {
-  display: inline-block;
-  text-align: center;
-  min-width: 1em;
-}
-
-.tick-text-inline + .tick-text-inline {
-  margin-left: -0.325em;
-  font-size: small;
-}
-
 .tick-group {
-  margin: 0 0.5em;
+  margin: 0 0.3em;
   text-align: center;
   background-color: #595757;
   display: -webkit-box;
@@ -73,9 +47,23 @@ body {
           align-items: center;
 }
 
+.tick-flip,
+.tick-text-inline {
+  font-size: 2em;
+}
+
+.tick-text-inline {
+  display: inline-block;
+  text-align: center;
+  min-width: 1em;
+}
+
+.tick-text-inline + .tick-text-inline {
+  margin-left: -0.325em;
+}
+
 .tick-group-up {
   padding: 10px;
-  height: 50%;
 }
 
 .tick-text-inline {
@@ -84,14 +72,11 @@ body {
 
 .tick-label {
   color: #ffffff;
+  font-size: 0.5em;
 }
 
 .tick-flip-panel {
   color: #ffffff;
-}
-
-.tick-flip {
-  font-family: 微軟正黑體 !important;
 }
 
 .tick-flip-panel-text-wrapper {
