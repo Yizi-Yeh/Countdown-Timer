@@ -43,6 +43,7 @@ body {
 
 .tick {
   white-space: nowrap;
+  width: auto;
 }
 
 .tick-group {
@@ -68,7 +69,7 @@ body {
 }
 
 .tick-group-up {
-  padding: 10px;
+  padding: 15px 10px;
 }
 
 .tick-text-inline {
@@ -91,4 +92,7 @@ body {
 .tick-flip-panel {
   border-radius: 0;
   background-color: $color_green;
+}
+.tick-flip-card {
+  height: 120%;
 }
