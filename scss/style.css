@@ -1,0 +1,105 @@
+@charset "UTF-8";
+* {
+  font-family: "Oswald", "微軟正黑體";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 75vw;
+}
+
+.tick {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.tick-flip,
+.tick-text-inline {
+  font-size: 2.5em;
+}
+
+.tick-label {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.tick-text-inline {
+  display: inline-block;
+  text-align: center;
+  min-width: 1em;
+}
+
+.tick-text-inline + .tick-text-inline {
+  margin-left: -0.325em;
+  font-size: small;
+}
+
+.tick-group {
+  margin: 0 0.5em;
+  text-align: center;
+  background-color: #595757;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tick-group-up {
+  padding: 10px;
+  height: 50%;
+}
+
+.tick-text-inline {
+  color: #595757;
+}
+
+.tick-label {
+  color: #ffffff;
+}
+
+.tick-flip-panel {
+  color: #ffffff;
+}
+
+.tick-flip {
+  font-family: 微軟正黑體 !important;
+}
+
+.tick-flip-panel-text-wrapper {
+  line-height: 1.45 !important;
+}
+
+.tick-flip-panel {
+  border-radius: 0;
+  background-color: #50a685;
+}
+/*# sourceMappingURL=style.css.map */

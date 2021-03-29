@@ -1,0 +1,107 @@
+$color_green: #50a685;
+$color_grey: #595757;
+$color_white: #ffffff;
+
+$text-font-xs: 0.8125rem;
+$text-font-sm: 0.9375rem;
+$text-font-md: 1rem;
+$text-font-lg: 1.2rem;
+
+// 垂直水平置中
+@mixin ab_center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//彈性盒
+@mixin flex($direct, $main, $cross) {
+  display: flex;
+  flex-direction: $direct;
+  justify-content: $main;
+  align-items: $cross;
+}
+* {
+  font-family: "Oswald", "微軟正黑體";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $color_white;
+}
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.container {
+  @include ab_center;
+  max-width: 75vw;
+}
+.tick {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.tick-flip,
+.tick-text-inline {
+  font-size: 2.5em;
+}
+
+.tick-label {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.tick-text-inline {
+  display: inline-block;
+  text-align: center;
+  min-width: 1em;
+}
+
+.tick-text-inline + .tick-text-inline {
+  margin-left: -0.325em;
+  font-size: small;
+}
+
+.tick-group {
+  margin: 0 0.5em;
+  text-align: center;
+  background-color: $color_grey;
+  @include flex(column, center, center);
+}
+
+.tick-group-up {
+  padding: 10px;
+  height: 50%;
+}
+
+.tick-text-inline {
+  color: $color_grey;
+}
+
+.tick-label {
+  color: $color_white;
+}
+
+.tick-flip-panel {
+  color: $color_white;
+}
+
+.tick-flip {
+  font-family: 微軟正黑體 !important;
+}
+
+.tick-flip-panel-text-wrapper {
+  line-height: 1.45 !important;
+}
+
+.tick-flip-panel {
+  border-radius: 0;
+  background-color: $color_green;
+}

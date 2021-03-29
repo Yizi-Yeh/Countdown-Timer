@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown Timer</title>
+    <!-- flip -->
+    <link
+      href="https://unpkg.com/@pqina/flip/dist/flip.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="tick" data-did-init="handleTickInit">
+            <div
+              data-repeat="true"
+              data-layout="horizontal fit"
+              data-transform="preset(d, h, m, s) -> delay"
+            >
+              <div class="tick-group">
+                <div
+                  class="tick-group-up"
+                  data-key="value"
+                  data-repeat="true"
+                  data-transform="pad(00) -> split -> delay"
+                >
+                  <span data-view="flip"></span>
+                </div>
+
+                <div class="tick-group-down">
+                  <span
+                    data-key="label"
+                    data-view="text"
+                    class="tick-label"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tick-onended-message" style="display: none">
+      <p>Time's up</p>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+
+    <script>
+      function handleTickInit(tick) {
+        let offset = new Date(
+          localStorage.getItem("countdown-offset") || new Date()
+        );
+
+        // localStorage.setItem("countdown-offset", offset);
+
+        // time in hours the timer will run down
+        let timeDuration = Tick.helper.duration(3, "days");
+
+        // add 24 hours to get final deadline
+        let deadline = new Date(
+          offset.setMilliseconds(offset.getMilliseconds() + timeDuration)
+        );
+
+        // create counter
+        let counter = Tick.count.down(deadline, {
+          format: ["d", "h", "m", "s"],
+        });
+
+        counter.onupdate = function (value) {
+          tick.value = value;
+        };
+
+        counter.onended = function () {};
+      }
+    </script>
+  </body>
+</html>
