@@ -63,15 +63,12 @@
 
         // localStorage.setItem("countdown-offset", offset);
 
-        // time in hours the timer will run down
         let timeDuration = Tick.helper.duration(3, "days");
 
-        // add 24 hours to get final deadline
         let deadline = new Date(
           offset.setMilliseconds(offset.getMilliseconds() + timeDuration)
         );
 
-        // create counter
         let counter = Tick.count.down(deadline, {
           format: ["d", "h", "m", "s"],
         });
